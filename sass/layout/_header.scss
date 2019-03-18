@@ -9,6 +9,7 @@
     background-position: top;
     position: relative; /* ! This is a reference position for logo-box class to start counting top and left px*/
 
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* ! Diagonal header => Triangle (50% 0, 100% 100%, 0 100%)*/
 
     &__logo-box {
