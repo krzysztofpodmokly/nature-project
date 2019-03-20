@@ -10,6 +10,14 @@
 html {
     /* font-size: 10px; Converting px to rem */
     font-size: 62.5%; /* 100% = 16px of font size given by the browser and we want 10px so 100% * 10 / 16 = 62.5% = 10px*/
+
+    @include respond-phone {
+        font-size: 50%;
+    }
+
+    @include respond(phone) {
+        font-size: 50%;
+    }
 }
 
 body {
