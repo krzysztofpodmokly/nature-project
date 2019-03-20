@@ -8,18 +8,30 @@
 
 /* ! Browser 16px font size is replaced with 10px know 1rem = 10px */
 html {
-    /* font-size: 10px; Converting px to rem */
+    /* font-size: 10px; Converting px to rem  || 1rem = 10px; 10px / 16px = 62.5%*/
     font-size: 62.5%; /* 100% = 16px of font size given by the browser and we want 10px so 100% * 10 / 16 = 62.5% = 10px*/
 
-    @include respond-phone {
-        font-size: 50%;
+    // media queries for phone and tablet portrait
+    
+
+    @include respond(tab-land) { // width < 1200
+        font-size: 56.25%; // 1rem = 9px, 9/16 = 56.25%
     }
 
-    @include respond(phone) {
-        font-size: 50%;
+    @include respond(tab-port) { // width < 900
+        font-size: 50%; // 1rem = 8px, 8/16 = 50%
+    }
+
+    @include respond(big-desktop) {
+        font-size: 75%; // 1rem = 12/16 = 75%
     }
 }
 
 body {
     box-sizing: border-box;
+    padding: 3rem;
+
+    @include respond(tab-port) { 
+        padding: 0;
+    }
 }
